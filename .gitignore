@@ -1,0 +1,29 @@
+# arquivo ambientes virtuais e dependências
+venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env
+
+# arquivos de configuração do IDE
+.vscode/
+.idea/
+
+# arquivos locais
+downloads/
+logs/
+
+# Jsons de configuração
+configuracoes.json
+usuarios.json
+
+# arquivos temporários
+*.tmp
+*.log
+
+# arquivos de sistema
+build/
+dist/
+*.egg-info/
