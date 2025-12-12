@@ -15,7 +15,7 @@ import yt_dlp
 from style import STYLE
 
 # --- Versão ---
-APP_VERSION = "1.0.0"
+APP_VERSION = "1.0.1"
 
 # --- Configurações Globais ---
 DATA_FILE = "configuracoes.json"
