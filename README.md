@@ -17,7 +17,7 @@ Para que o projeto funcione, a estrutura de pastas deve ser respeitada:
 
 ```text
 Auto-JA/
-├── build/                 <-- PASTA CRÍTICA (Veja instruções abaixo)
+├── builde/                 <-- PASTA CRÍTICA (Veja instruções abaixo)
 │   ├── ffmpeg.exe
 │   └── ffprobe.exe
 ├── downloads/             <-- Onde os arquivos são salvos

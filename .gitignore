@@ -25,5 +25,6 @@ usuarios.json
 
 # arquivos de sistema
 build/
+builde/
 dist/
 *.egg-info/
