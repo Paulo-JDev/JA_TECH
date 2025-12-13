@@ -21,14 +21,14 @@ APP_VERSION = "1.0.1"
 DATA_FILE = "configuracoes.json"
 ROOT_DIR = Path(sys.executable).parent if getattr(sys, 'frozen', False) else Path(__file__).parent
 # Define onde está a pasta build
-BUILD_DIR = ROOT_DIR / "build"
+BUILDE_DIR = ROOT_DIR / "builde"
 # Garante que a pasta downloads fique na raiz do projeto
 DOWNLOAD_DIR = ROOT_DIR / "downloads"
 DOWNLOAD_DIR.mkdir(exist_ok=True) # Cria a pasta se não existir
 
 # Verificação visual no terminal
 print(f"Raiz do Projeto: {ROOT_DIR}")
-print(f"Pasta de Ferramentas (Build): {BUILD_DIR}")
+print(f"Pasta de Ferramentas (Builde): {BUILDE_DIR}")
 
 # --- Funções de JSON ---
 def carregar_config():
@@ -60,13 +60,13 @@ class DownloadWorker(QThread):
         self.is_audio = is_audio
         self.quality_id = quality_id
         # Garante que seja string para o yt-dlp
-        self.ffmpeg_dir = str(BUILD_DIR) 
+        self.ffmpeg_dir = str(BUILDE_DIR)
 
     def run(self):
         # --- 1. Verificação de Segurança do FFmpeg ---
         # Verifica se os arquivos realmente existem antes de tentar baixar
-        ffmpeg_path = BUILD_DIR / "ffmpeg.exe"
-        ffprobe_path = BUILD_DIR / "ffprobe.exe"
+        ffmpeg_path = BUILDE_DIR / "ffmpeg.exe"
+        ffprobe_path = BUILDE_DIR / "ffprobe.exe"
 
         if not ffmpeg_path.exists():
             self.error.emit(f"CRÍTICO: ffmpeg.exe não encontrado em:\n{ffmpeg_path}")
